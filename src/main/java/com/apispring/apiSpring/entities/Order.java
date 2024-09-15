@@ -2,7 +2,6 @@ package com.apispring.apiSpring.entities;
 
 import com.apispring.apiSpring.entities.enums.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serial;
@@ -42,9 +41,7 @@ public class Order implements Serializable {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public void setId(Long id) { this.id = id; }
 
     public Instant getMoment() {
         return moment;
@@ -62,9 +59,7 @@ public class Order implements Serializable {
         this.client = client;
     }
 
-    public OrderStatus getOrderStatus() {
-        return OrderStatus.valueOf(orderStatus);
-    }
+    public OrderStatus getOrderStatus() { return OrderStatus.valueOf(orderStatus); }
 
     public void setOrderStatus(OrderStatus orderStatus) {
         if(orderStatus != null){
