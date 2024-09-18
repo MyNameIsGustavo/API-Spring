@@ -1,6 +1,5 @@
 package com.apispring.apiSpring.services;
 
-import com.apispring.apiSpring.entities.Order;
 import com.apispring.apiSpring.entities.User;
 import com.apispring.apiSpring.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +25,9 @@ public class UserService {
 
     public User insert (User object){
         return repository.save(object);
+    }
+
+    public void delete (Long id){
+         repository.deleteById(id);
     }
 }
